@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-salmon-peach: #F4A28C;
+  --color-cream: #FDF1E3;
+  --color-coral: #F08C75;
+  --color-periwinkle: #C9D5F5;
+  --color-bubblegum: #F7A8C8;
+  --color-pale-lime: #E9F2B9;
+  --color-hot-pink: #F0508A;
+  --color-light-blue: #BFD4F7;
+  --color-dark-charcoal: #2D2522;
+  --color-soft-slate: #6E625F;
+
+  --font-sans: var(--font-poppins), var(--font-manrope), sans-serif;
+  --font-display: var(--font-manrope), var(--font-poppins), sans-serif;
+
+  --radius-24: 24px;
+}
+
+:root {
+  --color-salmon-peach: #F4A28C;
+  --color-cream: #FDF1E3;
+  --color-coral: #F08C75;
+  --color-periwinkle: #C9D5F5;
+  --color-bubblegum: #F7A8C8;
+  --color-pale-lime: #E9F2B9;
+  --color-hot-pink: #F0508A;
+  --color-light-blue: #BFD4F7;
+  --color-dark-charcoal: #2D2522;
+  --color-soft-slate: #6E625F;
+}
+
+body {
+  background-color: #FDF1E3;
+  color: #2D2522;
+  font-family: var(--font-poppins), var(--font-manrope), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Vertical periwinkle stripes for hero section */
+.bg-hero-stripes {
+  background-color: #FDF1E3;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 42px,
+    rgba(201, 213, 245, 0.4) 42px,
+    rgba(201, 213, 245, 0.4) 54px
+  );
+}
+
+/* Organic scalloped/cloud-shaped frame */
+.cloud-frame {
+  border-radius: 42% 58% 65% 35% / 45% 45% 55% 55%;
+  transition: all 0.5s ease-in-out;
+}
+
+.scalloped-container {
+  border-radius: 36px;
+  box-shadow: 0 10px 30px -10px rgba(240, 140, 117, 0.15);
+}
+
+/* Marquee infinite scroll */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDF1E3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9D5F5;
+  border-radius: 9999px;
+  border: 2px solid #FDF1E3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F4A28C;
+}
+
+/* Hide scrollbar for carousel controls */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
