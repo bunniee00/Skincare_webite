@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
-import { Poppins, Manrope } from 'next/font/google';
+import { Poppins, Manrope, Geist } from 'next/font/google';
 import './globals.css';
 import { CartProvider } from '@/context/CartContext';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -32,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${manrope.variable}`}>
-      <body className="bg-[#FDF1E3] text-[#2D2522] min-h-screen flex flex-col font-sans selection:bg-[#F7A8C8] selection:text-[#2D2522]">
+    <html lang="en" className={cn(poppins.variable, manrope.variable, "font-sans", geist.variable)}>
+      <body className="bg-cream text-dark-charcoal selection:bg-bubblegum selection:text-dark-charcoal">
         <CartProvider>
           <Navbar />
           <main className="flex-1 w-full">{children}</main>
