@@ -23,7 +23,7 @@ export function Footer() {
             <div className="flex items-center gap-2">
               <FlowerIcon className="w-8 h-8" petalColor="#F08C75" centerColor="#E9F2B9" />
               <span className="font-extrabold text-2xl tracking-tight text-[#2D2522]">
-                Glow<span className="text-[#F08C75]">&</span>Bloom
+                BUNN<span className="text-[#F08C75]">NIEE</span>
               </span>
             </div>
             <p className="text-sm text-[#6E625F] leading-relaxed">

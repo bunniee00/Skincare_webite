@@ -42,7 +42,7 @@ export function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-xl sm:text-2xl tracking-tight leading-none text-white drop-shadow-xs">
-                BUNNIEE
+                BUNN<span className="text-[#2D2522]">NIEE</span>
               </span>
               <span className="text-[10px] font-medium tracking-widest text-[#FDF1E3] uppercase">
                 Pastel Skincare

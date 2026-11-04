@@ -3,6 +3,7 @@ import { HeroSection } from '@/components/home/HeroSection';
 import { Marquee } from '@/components/common/Marquee';
 import { BestsellersCarousel } from '@/components/home/BestsellersCarousel';
 import { CategoryBento } from '@/components/home/CategoryBento';
+import { About29 } from '@/components/about29';
 
 export const dynamic = 'force-dynamic';
 
@@ -20,7 +21,7 @@ export default async function HomePage() {
 
       {/* 3. Bestsellers carousel with arrow buttons */}
       <BestsellersCarousel products={bestsellers} />
-
+         <About29 />
       {/* 4. Curated skincare category cards */}
       <CategoryBento />
     </div>
